@@ -1,0 +1,175 @@
+// Global
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+.bg-black {
+  background-color: $black;
+}
+
+.bg-mercury {
+  background-color: $mercury;
+}
+
+.header {
+  background-color: $black;
+  padding: 0px 1rem 0px 1rem;
+  position: relative;
+}
+
+$skew: -14deg;
+
+.header-logo {
+  background-color: $mercury;
+  transform: translateX(-50%) skew($skew);
+  border-right: .75rem solid $sushi;
+  padding: 0px 1.13rem;
+  margin-left: 3rem;
+}
+
+.header--right {
+  margin-left: auto;
+}
+
+.content-box {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.pt-1 {
+  padding-top: .5rem;
+}
+
+.pb-1 {
+  padding-bottom: .5rem;
+}
+
+.header--right {
+  font-size: .75rem;
+}
+
+ul.main-nav {
+  list-style: none;
+  display: flex;
+
+  li:not(:last-child) {
+    margin-right: .75rem;
+  }
+
+  li a {
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      color: darken($white, 30%);
+    }
+  }
+}
+
+.navigation {
+  margin-top: 1rem;
+}
+
+.contact-us {
+  text-align: right;
+  a {
+    text-decoration: none;
+  }
+}
+
+.hero-img {
+  padding: 40px 0;
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/fp-hero-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 49rem;
+}
+
+.hero-section {
+  position: relative;
+  .img-cont {
+    display: flex;
+    position: absolute;
+    top: 31rem;
+    width: 36rem;
+  }
+}
+
+.header-container {
+  display: inline-block;
+  margin: 0 auto;
+  max-width: 27rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+    color: $white;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  p {
+    margin-top: 0rem;
+    color: $white;
+  }
+
+  .green {
+    color: $sushi;
+  }
+
+  .btn-green {
+    margin-top: 1rem;
+    background: linear-gradient(to right, $sushi 80%, $venice-blue 20%);
+    color: $white;
+    position: relative;
+    transform: translateX(0%) skew($skew);
+    font-size: .8rem;
+
+    .left-arrow {
+      padding-right: 1rem;
+      color: $white;
+    }
+
+    .right-arrow {
+      display: inline-block;
+      color: $white;
+      vertical-align: middle;
+      svg {
+        height: 32px;
+        width: 32px;
+      }
+    }
+  }
+}
+
+.advantage-section {
+  margin-top: 5rem;
+  background-color: $black;
+  padding: 5rem 0;
+
+  h2 {
+    text-align: center;
+    color: $white;
+    text-transform: capitalize;
+
+  }
+
+  .cta-container {
+    display: inline-block;
+    margin: 0 auto;
+    height: 5rem;
+    width: 100%;
+    border: 1px solid white;
+  }
+}

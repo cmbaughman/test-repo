@@ -1,0 +1,72 @@
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+$mod_1: 1.2; // mobile
+$mod_2: 1.5; // desktop
+
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-display: swap;
+  box-sizing: border-box;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2 {
+  margin-bottom: 4rem;
+  max-width: 100%;
+  line-height: 1.1em;
+}
+
+a.font-white {
+  color: $white;
+
+  &:hover {
+    color: $mercury;
+  }
+}
+
+h1 {
+  font-size: $mod_1*$mod_1*$mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+
+h2 {
+  font-size: $mod_1*$mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1*$mod_1 *$min_font, $mod_2*$mod_2*$mod_2 *$min_font);
+}
+
+h3 {
+  font-size: $mod_1*$mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+}
+
+h4 {
+  font-size: $mod_1 *1rem;
+  @include fluid-type($min_width, $max_width, $mod_1*$mod_1 *$min_font, $mod_2*$mod_2 *$min_font);
+}
+
+p {
+  margin: 2rem 0;
+  line-height: 1.4em;
+
+  &:last-of-type {
+      margin-bottom: 0;
+  }
+}
+
+a {
+  color: $ship-cove;
+  transition: 0.1s linear;
+
+  &:hover {
+      color: darken($ship-cove, 20%);
+  }
+}
