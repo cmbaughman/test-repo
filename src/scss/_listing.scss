@@ -1,0 +1,104 @@
+@use 'sass:color';
+
+.listing-hero {
+  .hero-text {
+    transform: translateY(0%);
+
+    @media (min-width: 680px) {
+      transform: translateY(16rem);
+    }
+  }
+}
+
+.listing-hero-img {
+  padding: 40px 0;
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero-driveway-ford-trucks.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 52rem;
+  margin-bottom: 5rem;
+
+
+  @media (min-width: 627px) {
+    height: 60rem;
+  }
+
+  @media (min-width: 1080px) {
+    margin-bottom: 9rem;
+  }
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+}
+
+.listing-body {
+  transform: translateY(0%);
+  @media (min-width: 1080px) {
+    transform: translateY(-15%);
+  }
+}
+
+.listing-container {
+  display: block;
+
+  @media (min-width: 1080px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .listing {
+    background-color: $willow-brook;
+    color: $black;
+    padding: .8rem 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 420px;
+
+    @media (min-width: 1080px) {
+      max-width: 350px;
+    }
+
+    img {
+      object-fit: contain;
+
+      @media (min-width: 1080px) {
+        max-width: 328px;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 1.8rem;
+    }
+
+    h4 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-style: italic;
+      margin-bottom: .5rem;
+    }
+
+    .listing-features {
+      ul {
+        list-style-type: none;
+        margin-bottom: 0;;
+
+        li {
+          border-top: 1px solid color.adjust($willow-brook, $lightness: -30%);
+          margin-bottom: 0;
+          padding: .5rem 0;
+          overflow-wrap: break-word;
+
+          // &:last-of-type {
+          //   border-bottom: 1px solid color.adjust($willow-brook, $lightness: -30%);
+          // }
+        }
+      }
+    }
+  }
+}
